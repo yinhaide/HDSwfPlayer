@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" type="text/JavaScript">
+var str1 = "hello";
+var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+function myFlash_DoFSCommand(command, args)                {
+  var myFlashObj = InternetExplorer ? myFlash : document.myFlash;
+  if(command == "main_back"){
+	doFromCommand(command);
+  }else{
+	doFromCommand("test");
+  }
+}
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && 
+  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+  document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+  document.write('on error resume next \n');
+  document.write('Sub myFlash_FSCommand(ByVal command, ByVal args)\n');
+  document.write(' call myFlash_DoFSCommand(command, args)\n');
+  document.write('end sub\n');
+  document.write('</SCRIPT\> \n');
+} 
+
+ function doFromCommand(command){
+	window.jsCallClassName.jsCallMethodName(command);//调用android的函数
+ }
+</script>
+</head> 
+<body>
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=11,0,0,0"
+ WIDTH="100%" HEIGHT="100%" id="myFlash">
+ <PARAM NAME=movie VALUE="main.swf"> 
+ <PARAM NAME=quality VALUE=high>
+ <PARAM NAME=bgcolor VALUE=#CCCCCC> 
+ <param name="allowScriptAccess" value="always" />
+ <param name="allowNetworking" value="all">
+ <param name="allowFullScreen" value="true">
+ <EMBED src="main.swf" quality=high bgcolor=#CCCCCC  WIDTH="100%" HEIGHT="100%" NAME="myFlash" swLiveConnect="true" allowScriptAccess="always" allownetworking="all" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+</OBJECT>
+ <div id="show" style="color:#000000;font-size:30px;margin-left:50px" ></div>
+
+</body>
+</html>
