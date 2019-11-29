@@ -110,12 +110,15 @@ SwfPlayerHelper.getInstance(getApplicationContext()).androidCallJSMethodWithRetu
 ```
 
 <a name="About"></a>
+### 这个项目会持续更新中... 
+> 都看到这里了，如果觉得写的可以或者对你有帮助的话，顺手给个星星点下Star~
+
 ### 关于我
++ **Email:** [123302687@qq.com](123302687@qq.com)
++ **Github:** [https://github.com/yinhaide](https://github.com/yinhaide)
++ **简书:** [https://www.jianshu.com/u/33c3dd2ceaa3](https://www.jianshu.com/u/33c3dd2ceaa3)
++ **CSDN:** [https://blog.csdn.net/yinhaide](https://blog.csdn.net/yinhaide)
 
-    欢迎 Star Fork
-    交流地址：尹海德（123302687@qq.com）
-
-<a name="License"></a>
 ### License
 
     Copyright 2017 yinhaide
